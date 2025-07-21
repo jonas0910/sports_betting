@@ -1,0 +1,40 @@
+# Logs
+**/logs
+**/*.log
+**/npm-debug.log*
+
+# Dependency directories
+/backend/node_modules
+/frontend/node_modules
+
+# Build outputs
+/backend/dist
+/frontend/.next
+/frontend/out
+
+# Environment files
+**/.env
+**/.env.*.local
+
+# IDE/editor config
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Docker volumes or builds
+docker-compose.override.yml
+**/tmp
+**/coverage
+
+# TypeScript
+**/*.tsbuildinfo
+
+# Misc
+**/yarn.lock
+**/pnpm-lock.yaml
+**/package-lock.json
