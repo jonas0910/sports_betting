@@ -11,17 +11,17 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (isAuthenticated()) {
       router.push("/dashboard/events");
     }
   }, []);
-  const router = useRouter();
+
   const handleSubmit = async () => {
     try {
       setLoading(true);
-      console.log("user", { username, password });
       await login({ username, password });
       router.push("/dashboard/events");
     } catch (err) {
@@ -32,23 +32,27 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="w-full max-w-md p-6 rounded-xl shadow-lg bg-white dark:bg-zinc-900">
-        <h1 className="text-2xl font-bold mb-4">Iniciar sesión</h1>
+    <div className="flex min-h-screen items-center justify-center bg-[#0f0f0f] text-white">
+      <div className="w-full max-w-md p-6 rounded-xl shadow-lg bg-[#1a1a1a] border border-zinc-700">
+        <h1 className="text-3xl font-bold mb-6 text-center">Iniciar sesión</h1>
         <Input
           placeholder="Usuario"
+          className="bg-zinc-800 text-white placeholder:text-zinc-400 border-zinc-600"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <Input
-          className="mt-3"
           type="password"
           placeholder="Contraseña"
+          className="mt-3 bg-zinc-800 text-white placeholder:text-zinc-400 border-zinc-600"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {error && <p className="text-red-500 mt-2">{error}</p>}
-        <Button className="mt-4 w-full" onClick={handleSubmit}>
+        {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
+        <Button
+          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white"
+          onClick={handleSubmit}
+        >
           {loading ? "Ingresando..." : "Entrar"}
         </Button>
       </div>
