@@ -12,7 +12,11 @@ export default function EventsPage() {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   useEffect(() => {
-    api.get("/events").then((res) => setEvents(res.data));
+    api
+      .get("/events", {
+        withCredentials: true,
+      })
+      .then((res) => setEvents(res.data));
   }, []);
 
   return (
