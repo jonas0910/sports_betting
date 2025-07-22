@@ -14,6 +14,14 @@ Una aplicacion web de apuestas deportivas desarrollada con tecnologías modernas
 - **Tailwind CSS**: Framework de CSS utilitario para diseño rápido y responsivo
 - **shadcn/ui**: Biblioteca de componentes UI moderna y accesible
 
+## 📋 Requisitos del Sistema
+
+Para ejecutar este proyecto necesitas tener instalado:
+
+- **Docker**
+- **Docker Compose**
+- **Git**
+
 ## 🚀 Instalación y Configuración
 
 ### 1. Clonar el Repositorio
