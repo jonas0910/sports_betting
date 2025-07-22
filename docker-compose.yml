@@ -12,11 +12,14 @@ services:
       - ./init:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
-
+    networks:
+      - app-network
   backend:
     build:
       context: ./backend
     command: ["./entrypoint.sh"]
+    networks:
+      - app-network
     volumes:
       - ./backend:/app
       - /app/node_modules
@@ -36,6 +39,14 @@ services:
       - backend
     env_file:
       - ./frontend/.env
+    networks:
+      - app-network
 
 volumes:
   pgdata:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
+    name: sports_betting_network
