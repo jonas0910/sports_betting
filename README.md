@@ -50,6 +50,10 @@ Este comando iniciará todos los servicios necesarios:
 - Backend API (NestJS)
 - Frontend (Next.js)
 
+### 4. Acceder a la aplicación
+
+Ahora se podra acceder a la aplicacion en: http://localhost:3001
+
 ## 🔐 Credenciales Demo
 
 Para probar la aplicación, utiliza las siguientes credenciales:
