@@ -71,6 +71,8 @@ Para probar la aplicación, utiliza las siguientes credenciales:
 
 ## 📚 API Endpoints
 
+http://localhost:3000
+
 ### Rutas Públicas
 
 #### Autenticación
