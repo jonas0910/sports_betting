@@ -4,8 +4,8 @@ import { UpdateBetDto } from './dto/update-bet.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Bet } from './entities/bet.entity';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/entities/user.entity';
-import { Event } from 'src/events/entities/event.entity';
+import { User } from '../users/entities/user.entity';
+import { Event } from '../events/entities/event.entity';
 
 @Injectable()
 export class BetsService {

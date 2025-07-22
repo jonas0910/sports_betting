@@ -8,7 +8,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 import { BetStatus } from '../enums/enums';
-import { MatchResult } from 'src/events/enums/enums';
+import { MatchResult } from '../../events/enums/enums';
 
 @Entity()
 export class Bet {

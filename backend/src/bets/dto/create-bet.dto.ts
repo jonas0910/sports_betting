@@ -1,5 +1,5 @@
 import { IsDateString, IsEnum, IsNumber, IsOptional } from 'class-validator';
-import { MatchResult } from 'src/events/enums/enums';
+import { MatchResult } from '../../events/enums/enums';
 import { BetStatus } from '../enums/enums';
 
 export class CreateBetDto {

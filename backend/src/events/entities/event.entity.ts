@@ -1,5 +1,5 @@
-import { Bet } from 'src/bets/entities/bet.entity';
-import { Team } from 'src/teams/entities/team.entity';
+import { Bet } from '../../bets/entities/bet.entity';
+import { Team } from '../../teams/entities/team.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
