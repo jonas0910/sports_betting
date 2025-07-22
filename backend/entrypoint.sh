@@ -13,5 +13,8 @@ echo "✅ PostgreSQL está listo. Ejecutando migraciones..."
 # Ejecutar migraciones
 npx typeorm migration:run -d ormconfig.ts
 
+echo "🌱 Ejecutando seeding inicial..."
+npm run seed
+
 echo "🚀 Iniciando la app NestJS..."
 npm run start:dev
