@@ -1,1 +1,10 @@
-export class CreateTeamDto {}
+import { IsNotEmpty, IsString, IsUrl } from 'class-validator';
+
+export class CreateTeamDto {
+  @IsString()
+  @IsNotEmpty()
+  name: string;
+
+  @IsUrl()
+  logoUrl: string;
+}

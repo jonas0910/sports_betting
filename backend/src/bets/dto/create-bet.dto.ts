@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { IsDateString, IsEnum, IsNumber, IsOptional } from 'class-validator';
 import { MatchResult } from 'src/events/enums/enums';
 import { BetStatus } from '../enums/enums';
